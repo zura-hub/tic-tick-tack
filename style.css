@@ -1,0 +1,503 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #1A2A33;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.xo{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.xo img{
+    width: 50px;
+    height: 50px;
+}
+
+.player-piker{
+    height: 205px;
+    width: 327px;
+    border-radius: 15px;
+    background: #1F3641;
+    box-shadow: inset 0px -8px 0px #10212A;
+    border-radius: 15px;    
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.piker-text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #A8BFC9;
+    padding-top: 23px;
+}
+
+.pik-xo{
+    height: 72px;
+    width: 279px;
+    border-radius: 10px;
+    background: #1A2A33;
+    display: flex;
+    transform: translate(23px, 30%);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pik-x{
+    width: 138px;
+    height: 70px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* .pik-x:hover{
+    background: #A8BFC9;
+} */
+
+.pik-o{
+    width: 138px;
+    height: 70px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* .pik-o:hover{
+    background: #A8BFC9;
+} */
+
+.pik-xo img{
+    height: 32px;
+    width: 32px;
+}
+
+.piker-x{
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+.piker-o{
+    cursor: pointer;
+    transform: translateX(50px);
+    margin-top: 15px;
+}
+
+.piker-btn{
+    margin-top: 15px;    
+}
+
+.yellow{
+    height: 56px;
+    width: 327px;
+    border-radius: 15px;
+    background: #F2B137;
+    box-shadow: inset 0px -8px 0px #CC8B13;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #1A2A33;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.blue{
+    height: 56px;
+    width: 327px;
+    border-radius: 15px;
+    background: #31C3BD;
+    box-shadow: inset 0px -8px 0px #118C87;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #1A2A33;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+}  
+
+
+.piker-second-text{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    padding-top: 30px;
+}
+
+/* game zone */
+
+.gaming-zone{
+    display: none;
+}
+.cont{
+    padding: 28px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-xo{
+    height: 31px;
+    width: 63px;
+    display: inline;
+}
+
+.header-turn{
+    width: 96px;
+    height: 40px;
+    left: 142px;
+    background: #1F3641;
+    box-shadow: inset 0px -4px 0px #10212A;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: -7px;
+   
+}
+
+.header-input{
+    background: transparent;
+    width: 35px;
+    height: 35px;
+    border: none;
+}
+
+.header-turn img{
+    width: 16px;
+    height: 16px;
+    margin: 10px;
+}
+
+.header-text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+    margin-left: 15px;
+}
+
+.restart{
+    width: 40px;
+    height: 40px;
+    background: #A8BFC9;
+    box-shadow: inset 0px -4px 0px #6B8997;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.tic-tack{
+    width: 310px;
+}
+/* tictac squares */
+
+.tic-box{
+    margin-top: 60px;
+    display: grid;   
+    grid-template-columns: auto auto auto; 
+}
+
+.box{
+    width: 100px;
+    height: 96px;
+    background: #1F3641;
+    box-shadow: inset 0px -8px 0px #10212A;
+    border-radius: 10px;
+    border: none;
+    margin: 1.9px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+}
+
+.box >img {
+    height: 60px;
+    width: 60px;
+}
+
+
+/* counet time */
+
+.counter-time{
+    display: flex;
+    justify-content: space-between;
+}
+
+.counter-x{
+    width: 96px;
+    height: 64px;
+    background: #31C3BD;
+    border-radius: 10px;
+}
+
+
+.counter-ties{
+    width: 96px;
+    height: 64px;
+    background: #A8BFC9;
+    border-radius: 10px;
+}
+
+.ties-number{
+    background: transparent;
+    width: 40px;
+    height: 30px;
+    display: block;
+    margin: auto;
+    margin-top: -10px;
+    border: none;
+}
+
+.counter-y{
+    width: 96px;
+    height: 64px;
+    background: #F2B137;
+    border-radius: 10px;
+}
+
+.y-win-number{
+    background: transparent;
+    width: 40px;
+    height: 30px;
+    display: block;
+    margin: auto;
+    margin-top: -10px;
+    border: none;
+}
+
+.xp{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #1A2A33;
+    display: block;
+    margin: auto;
+}
+
+.xp{
+    background: transparent;
+    height: 30px;
+    width: 40px;
+    margin-top: 10px;
+}
+
+.x-win-number{
+    background: transparent;
+    width: 40px;
+    height: 30px;
+    display: block;
+    margin: auto;
+    margin-top: -10px;
+    border: none;
+}
+
+/* winner */
+.ties{
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.285);
+    height: 300px;   
+    display: none;
+    width: 100%; 
+}
+
+.ties-inner{
+    width: 375px;
+    left: 0px;
+    top: 220px;
+    background: #1F3641;
+    text-align: center;
+}
+
+.ties-text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+}
+
+.ties-round-text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+    color: #A8BFC9;
+    margin-top: 15px;
+}
+.o-winner{
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.285);
+    height: 300px;   
+    display: none;
+    width: 100%; 
+}
+
+.o-winner-inner{
+    width: 375px;
+    left: 0px;
+    top: 220px;
+    background: #1F3641;
+    text-align: center;
+}
+
+.o-winner-text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+}
+
+.o-take-round{
+    display: flex;
+    justify-content: space-between;
+    width: 290px;
+    align-items: center;
+    justify-content: center;
+}
+
+.o-take-round img{
+    height: 30px;
+    width: 30px;
+    border-radius: 0px;
+    margin-right: 5px;
+    margin-left: 50px;
+    margin-top: 17px;
+}
+
+.o-take-round-text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+    color: #F2B137;
+    margin-top: 15px;
+}
+
+
+.x-winner{
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.285);
+    height: 300px;   
+    display: none; 
+    width: 100%;
+}
+
+.x-winner-inner{
+    width: 375px;
+    left: 0px;
+    top: 220px;
+    background: #1F3641;
+    text-align: center;
+}
+
+.x-winner-text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+}
+
+.x-take-round{
+    display: flex;
+    justify-content: space-between;
+    width: 290px;
+    align-items: center;
+    justify-content: center;
+}
+
+.x-take-round img{
+    height: 30px;
+    width: 30px;
+    border-radius: 0px;
+    margin-right: 5px;
+    margin-left: 50px;
+    margin-top: 17px;
+}
+
+.x-take-round-text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+    color: #F2B137;
+    margin-top: 15px;
+}
+
+
+
+/* btn */
+
+.btn{
+    margin: 24px;
+}
+.quit-btn{
+    background: #A8BFC9;
+    box-shadow: inset 0px -4px 0px #6B8997;
+    border-radius: 10px;
+    height: 52px;
+    width: 76px;
+    border-radius: 10px;
+    border: none;
+}
+
+.next-tbn{
+    height: 52px;
+    width: 146px;
+    border-radius: 10px;
+    background: #F2B137;
+    box-shadow: inset 0px -4px 0px #CC8B13;
+    border-radius: 10px;
+    border: none;
+    margin-left: 16px;
+}

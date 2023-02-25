@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div class="sratr-game">
+  <div class="xo">
+    <img src="./starter-code/assets/icon-x.svg">
+    <img src="./starter-code/assets/icon-o.svg" alt="">
+  </div>
+
+
+<div class="player-piker">
+  <h1 class="piker-text">PICK PLAYER 1’S MARK</h1>
+  <div class="pik-xo">
+    <div class="pik-x">
+      <img class="piker-x" src="./starter-code/assets/icon-x.svg" alt="">
+    </div>
+    <div  class="pik-o">
+      <img class="piker-o" src="./starter-code/assets/icon-o.svg" alt="">
+    </div>
+  </div>
+  <h2 class="piker-second-text">REMEMBER : X GOES FIRST</h2>
+</div>
+
+<div class="piker-btn">
+  <button  class="yellow">NEW GAME (VS CPU)</button>
+  <button onclick="twoPlayers()" class="blue">NEW GAME  (VS PLAYER)</button>
+</div>
+</div>
+<div class="gaming-zone">
+  
+    <!-- winner -->
+    <div class="o-winner">
+      <div class="o-winner-inner">
+        <div class="o-winner-text">
+          PLAYER 1 WINS!
+        </div>
+  
+        <div class="o-take-round">
+          <img src="./starter-code/assets/icon-o.svg" alt="">
+          <div class="o-take-round-text">TAKES THE ROUND</div>
+        </div>
+  
+        <div class="btn">
+          <button class="quit-btn">QUIT</button>
+          <button class="next-tbn">NEXT ROUND</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="x-winner">
+      <div class="x-winner-inner">
+        <div class="x-winner-text">
+          PLAYER 1 WINS!
+        </div>
+  
+        <div class="x-take-round">
+          <img src="./starter-code/assets/icon-x.svg" alt="">
+          <div class="x-take-round-text">TAKES THE ROUND</div>
+        </div>
+  
+       
+        <div class="btn">
+          <button class="quit-btn">QUIT</button>
+          <button class="next-tbn">NEXT ROUND</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="ties">
+      <div class="ties-inner">
+        <div class="tis-text">
+          PLAYER 1 WINS!
+        </div>
+  
+        <div class="ties-round">
+          <div class="ties-round-text">ROUND TIED</div>
+        </div>
+  
+       
+        <div class="btn">
+          <button class="quit-btn">QUIT</button>
+          <button class="next-tbn">NEXT ROUND</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- tic tac header -->
+  <div class="cont">
+    <div class="tic-tack">
+      <header class="header">
+        <div class="header-xo"><img src="./starter-code/assets/logo.svg" alt=""></div>
+        <div class="header-turn"><input class="header-input" value=""><p class="header-text">Turn</p></div>
+        <div onclick="retry()" class="restart"><img src="./starter-code/assets/icon-restart.svg" alt=""></div>
+      </header>
+      <!-- squares -->
+     <div class="tic-box">
+            <div class="box" id="cube1" ></div>
+            <div class="box" id="cube2" ></div>
+            <div class="box" id="cube3" ></div>
+            <div class="box" id="cube4" ></div>
+            <div class="box" id="cube5" ></div>
+            <div class="box" id="cube6" ></div>
+            <div class="box" id="cube7" ></div>
+            <div class="box" id="cube8" ></div>
+            <div class="box" id="cube9" ></div>
+     </div>
+     <!-- counter andtime -->
+     <div class="counter-time">
+      <div class="counter-x">
+        <p class="xp">X (P2)</p>
+        <div class="input">
+          <input type="text" readonly class="x-win-number">
+        </div>
+      </div>
+      <div class="counter-ties">
+        <p class="xp">TIES</p>
+        <div class="input">
+          <input type="text" readonly class="ties-number">
+        </div>
+      </div>
+      <div class="counter-y">
+        <p class="xp">O (P1)</p>
+        <div class="input">
+          <input type="text" readonly class="y-win-number">
+        </div>
+      </div>
+     </div>
+    </div>
+  </div>  
+</div>
+  <!-- script -->
+  <script src="js.js"></script>
+</body>
+</html>
