@@ -8,6 +8,39 @@ const gamingBoard = document.querySelectorAll('.box');
 let twoPlayer;
 
 
+// X or O
+
+
+pikerXO.forEach(element => {
+  element.addEventListener('click', function() {
+    if (element.firstElementChild === X) {
+      document.querySelector('.header-input').value = "X"
+    } else if (element.firstElementChild === O) {
+      
+      document.querySelector('.header-input').value = 'O';
+    }    
+  });
+  console.log(element)
+});
+
+
+pikerXO.forEach(element => {
+  element.addEventListener('click', function() {
+    if (element.firstElementChild === X) {
+    } else if (element.firstElementChild === O) {
+      gamingBoard.innerHTML = X
+    }    
+  });
+  for (let i =0; i < gamingBoard.length; i ++){
+    if (gamingBoard[i] != ' '){
+      gamingBoard[i] = X
+    }
+  }
+});
+
+
+// marck user choise
+
 let lastClicked = null;
 
 pikerXO.forEach(element => {
@@ -55,14 +88,19 @@ gamingBoard.forEach(element => {
 });
 
 
-// twoPlayer.addEventListener('click' , () =>{
-//   for(let i = 0; i < gamingBoard.length; i++){
-//     if (gamingBoard[i][0] !== ' ')
-//   }
-// })
 
-
-
+gamingBoard.forEach(box => {
+  box.addEventListener('click', () => {
+    // Check all possible winning combinations
+    for (let i = 0; i < 9; i++) {
+      if (gamingBoard[0].innerHTML == X &&
+        gamingBoard[1].innerHTML == X &&
+        gamingBoard[2].innerHTML == X){
+        xwin()
+      }
+    }
+  });
+});
 
 
 
@@ -79,7 +117,7 @@ function tied() {
   document.querySelector('.ties').style.display = 'block'
 }
 
-function retry(){
+function retry() {
   location.reload();
 }
 
