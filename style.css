@@ -493,9 +493,11 @@ body{
     width: 76px;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 
 .next-tbn{
+    cursor: pointer;
     height: 52px;
     width: 146px;
     border-radius: 10px;
